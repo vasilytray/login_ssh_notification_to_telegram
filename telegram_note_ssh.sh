@@ -1,6 +1,6 @@
 #!/bin/bash
 # Telegram notification
-# Send msg when your server load to high
+# Send msg when your server have new ssh login
 token="_TOKEN_" # put your token here 
 chat_id="_CHAT_ID_" # your chat_id for sending notification
 sendmsg="https://api.telegram.org/bot$token/sendMessage?parse_mode=markdown" # url for sending msg
