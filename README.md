@@ -4,8 +4,7 @@ notification to telegram bot about new ssh login
 Скрипт отправки уведомлений в телеграмм о входе на сервер по SSH
 
 tags = ['Telegram', 'Bash', 'Bot']
-image = "/posts/telegrambot-ssh.png"
-
+![bot-token and chat-id](/images/posts/telegrambot-ssh.png)
 Для работы скрипта Вам понадобится jq
 
 Установка **jq** _Ubuntu / Linux Mint / Debian_
