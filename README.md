@@ -3,8 +3,8 @@ notification to telegram bot about new ssh login
 ## Как отправить уведомление в Telegram
 Скрипт отправки уведомлений в телеграмм о входе на сервер по SSH
 
-tags = ['Telegram', 'Bash', 'Bot']
-![bot-token and chat-id](/images/posts/telegrambot-ssh.png)
+![bot-token and chat-id](/images/telegrambot-ssh.png)
+
 Для работы скрипта Вам понадобится jq
 
 Установка **jq** _Ubuntu / Linux Mint / Debian_
@@ -24,7 +24,7 @@ wget -P /usr/local/bin/ https://raw.githubusercontent.com/vasilytray/login_ssh_n
 ```
 nano /usr/local/bin/telegram_note_ssh.sh
 ```
-![bot-token and chat-id](/images/posts/chat_id_telegram.jpg)
+![bot-token and chat-id](/images/chat_id_telegram.jpg)
 
 Как получить chat_id для telegram_bot?
 Для начала надо узнать бот-токен и для этого обратимся к @BotFather, - это бот в Telegram котрый создает ботов.  Там для своего бота узнаем токен (сообщался при создании бота)
@@ -53,7 +53,7 @@ $ echo "session optional pam_exec.so type=open_session seteuid /usr/local/bin/te
 $ echo "session optional pam_exec.so type=open_session seteuid /usr/local/bin/telegram_note_ssh.sh" >> /etc/pam.d/common-session
 ```
 организуем новое соединение на сервер по ssh  и получем долгожданное сообщение от бота:
-![telegram-bot alert ssh-login!](/images/posts/telegram_bot_alert.jpg)
+![telegram-bot alert ssh-login!](/images/telegram_bot_alert.jpg)
 
 Ну если не получаем желаемого результата и убеждены, что все сделали правильно, тоооооо...
 
