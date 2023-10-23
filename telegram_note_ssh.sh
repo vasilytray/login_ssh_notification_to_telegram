@@ -12,7 +12,7 @@ curl http://ip-api.com/json/$PAM_RHOST -s -o $caption_file #take info about new 
 country=$(cat $caption_file | jq '.country' | sed 's/"//g')
 city=$(cat $caption_file | jq '.city' | sed 's/"//g')
 org=$(cat $caption_file | jq '.as' | sed 's/"//g')
-echo -e "🆘**New SSH login**🆘\n*🥷🏻$PAM_USER* logged in on server *$HOSTNAME* at $date \nfrom IP: $PAM_RHOST\n-Country:*$country*\n-City=*$city*\n-Organisation=*$org*" > $msg
+echo -e "🆘**New SSH login**🆘\n*🥷🏻$PAM_USER* logged in on server *$HOSTNAME*\n at $date \nfrom IP: $PAM_RHOST\n-Country:*$country*\n-City=*$city*\n-Organisation=*$org*" > $msg
 curl $sendmsg -d chat_id=$chat_id -d text="$(<$msg)" 
 rm /tmp/ssh_caption_file.txt
 rm /tmp/ssh_msg_info.txt
